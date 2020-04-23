@@ -1,0 +1,46 @@
+
+.formAgregar{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+}
+
+input[type="text"], input[type="email"], input[type="number"]{ /* Este estilo toma todos los input de tipo text y email*/
+    width: 48%;
+    margin-bottom: 25px;
+    padding: 20px 0;
+    border: 0;
+    border-bottom: 1px solid #5cb8ff;
+    font-size: 17px;
+}
+
+
+
+input[type="submit"]{ /*Botones de header y sobre mi*/
+    font-size: 14px;
+    color: #fff;
+    background: #1e7d7d;
+    padding: 14px 24px;
+    display: inline-block; /* Para que tome propiedades tambien de block para darle un tamaño definido*/
+    width: 160px;
+    text-decoration: none; /* Quitamos subrayado*/
+    margin: 0 auto;
+}
+
+.divFile{
+    display: flex;
+    border-bottom: 1px solid #5cb8ff;
+    align-items: center;
+    width: 48%;
+}
+
+
+.file{
+    padding-top: 10px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus{ /* Este estilo toma todos los input de tipo text y email*/
+    border-bottom: 1px solid #1e7d7d;
+}
