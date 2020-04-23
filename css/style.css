@@ -16,12 +16,10 @@ input[type="text"], input[type="email"], input[type="number"]{ /* Este estilo to
     font-size: 17px;
 }
 
-
-
 input[type="submit"]{ /*Botones de header y sobre mi*/
     font-size: 14px;
     color: #fff;
-    background: #1e7d7d;
+    background: #205454;
     padding: 14px 24px;
     display: inline-block; /* Para que tome propiedades tambien de block para darle un tamaño definido*/
     width: 160px;
@@ -35,7 +33,6 @@ input[type="submit"]{ /*Botones de header y sobre mi*/
     align-items: center;
     width: 48%;
 }
-
 
 .file{
     padding-top: 10px;

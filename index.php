@@ -10,7 +10,7 @@
     <h1>Agenda de contactos</h1>
     <div class="container">
         <h2 style="text-align: center;">Ingresar contacto</h2>
-        <form id="formAgregar" class="formAgregar" method="POST" action="agregarContacto.php" enctype="multipart/form-data">
+        <form id="formAgregar" class="formAgregar" method="POST" action="agregar.php" enctype="multipart/form-data">
             
             <input type="text" name="name" id="name" placeholder="Nombre:" required="required">
 
@@ -20,7 +20,7 @@
 
             <input type="number" name="phone" id="phone" placeholder="Teléfono:" required="required">
             <div class="divFile">
-                <input type="file" class="file" required>
+                <input type="file" class="file" name="photo" required>
             </div>
             <input type="submit" value="Agregar contacto"/> 
         </form>
