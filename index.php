@@ -7,7 +7,11 @@ $resultado = mysqli_query($conexion, $sql); #resultado = $conexion->query($sql);
 
 $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la sentencia. ESto devuelve un array
 
-
+if(mysqli_num_rows($resultado)==0){
+    $mensaje = "<h3>No hay registros en la BD</h3>";
+}else{
+    $mensaje = "<h3>Consulta general</h3>";
+}
 ?>
 
 <!DOCTYPE html>
@@ -39,7 +43,9 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
     </div>
      
     <h2>Lista y actualización de contactos</h2>
+    <?php echo $mensaje ?>
     <div class="containerTwo">
+        
         <?php foreach($resultado_contactos as $registro): ?>
             <form method="POST" action="actualizar.php" enctype="multipart/form-data">
                 <div class="card">
