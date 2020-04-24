@@ -1,7 +1,9 @@
 <?php 
     /* Necesita la conexión a la BD*/
 require('conexion.php');
+//Validación de campos vacios
 if ($_FILES['photoUpdate']['name'] != null && !empty($_POST['idContactUpdate']) && !empty($_POST['namesUpdate']) && !empty($_POST['lastNameUpdate']) && !empty($_POST['phoneUpdate']) && !empty($_POST['emailUpdate']) ) { //Validación que el input tipo file nop este vacio
+    //Guardamos los datos obtenidos por POST en su respectiva variable
     $id = $_POST['idContactUpdate'];
     $names = $_POST['namesUpdate'];
     $lastName = $_POST['lastNameUpdate'];

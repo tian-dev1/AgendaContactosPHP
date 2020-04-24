@@ -1,8 +1,10 @@
 <?php 
 /* Importamos el archivo de conexion*/
 require('conexion.php');
-if ($_FILES['photo']['name'] && !empty($_POST['names']) && !empty($_POST['lastName']) && !empty($_POST['phone'])  && !empty($_POST['email'])) { //Validación que el input tipo file nop este vacio
 
+//Validación de campos vacios
+if ($_FILES['photo']['name'] && !empty($_POST['names']) && !empty($_POST['lastName']) && !empty($_POST['phone'])  && !empty($_POST['email'])) { //Validación que el input tipo file nop este vacio
+    //Guardamos los datos obtenidos por POST en su respectiva variable
     $name = $_POST['names'];
     $lastName = $_POST['lastName'];
     $email = $_POST['email'];
