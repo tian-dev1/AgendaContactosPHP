@@ -1,13 +1,18 @@
+
+
+
 h1, h2{
     text-align: center;
+    
 }
 .container{
-    background-color: red;
+    width: 90%;
     padding: 20px 0;
-    margin: 20px 0;
+    margin: 20px auto;
+    box-shadow: 0 .46875rem 2.1875rem rgba(90,97,105,.1),0 .9375rem 1.40625rem rgba(90,97,105,.1),0 .25rem .53125rem rgba(90,97,105,.12),0 .125rem .1875rem rgba(90,97,105,.1);
+      
 }
 .formAgregar{
-    background-color: rosybrown;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -53,7 +58,6 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus{
 
 
 .containerTwo{
-    background-color: blue;
     display: flex;
     flex-wrap: wrap;
     width: 95%;
@@ -61,9 +65,8 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus{
 }
 
 .card{
-    background-color: yellow;
     width: 430px; 
-    min-height:  780px;
+    min-height:  750px;
     margin: 20px;
     box-shadow: 0 .46875rem 2.1875rem rgba(90,97,105,.1),0 .9375rem 1.40625rem rgba(90,97,105,.1),0 .25rem .53125rem rgba(90,97,105,.12),0 .125rem .1875rem rgba(90,97,105,.1)
 }
@@ -75,7 +78,7 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus{
 
 .row{
     width: 100%;
-    padding: 10px;
+    padding: 10px 0;
     text-align: center;
 }
 .file{
@@ -115,9 +118,32 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 
-.card  input[type="submit"]{ /*Botones de header y sobre mi*/
+.card input[type="submit"]{ /*Botones de header y sobre mi*/
     display: block;
-    margin: 30px auto;
     width: 170px;
     padding: 14px 24px;
+    margin: 10px auto;
+}
+
+.card .divFile{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.buttonsActions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#Eliminar{ /*Botones de header y sobre mi*/
+    font-size: 14px;
+    color: #fff;
+    background: #205454;
+    padding: 14px 24px;
+    display: inline-block; /* Para que tome propiedades tambien de block para darle un tamaño definido*/
+    width: 130px;
+    text-decoration: none; /* Quitamos subrayado*/
+    text-align: center;
+    margin: 10px auto;
 }

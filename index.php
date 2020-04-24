@@ -44,10 +44,7 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
             <form method="POST" action="actualizar.php" enctype="multipart/form-data">
                 <div class="card">
                     <img class="images" src="<?php echo $registro[5]; ?>" alt="">
-                    <div class=row>
-                        <label class="labelsContact" for="idContact">ID Imagen: </label>
-                        <input type="number" readonly="readonly" name="idContact" id="idContact" value="<?php echo $registro[0]; ?>"/>
-                    </div>
+                    <input type="hidden" readonly="readonly" name="idContact" id="idContact" value="<?php echo $registro[0]; ?>"/>
                     <div class="row">
                         <label class="labelsContact" for="names">Nombre: </label>
                         <input type="text" name="names" id="names" value="<?php echo $registro[1]; ?>" required/>
@@ -64,9 +61,13 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
                         <label class="labelsContact" for="email">Correo: </label>
                         <input type="email" name="email" id="email" value="<?php echo $registro[4]; ?>" required/>
                     </div>
-                    <input class="file" type="file" name="photo" required/>    
-                    <input class="buttonUpdate" name="btnEnviar" type="submit" value="Actualizar contacto">
-                    <a href="eliminar.php?idContact=<?php echo $registro[0]; ?>">Eliminar</a>
+                    <div class="divFile">
+                        <input class="file" type="file" name="photo" required/>    
+                    </div>
+                    <div class="buttonsActions">
+                        <input class="buttonUpdate" name="btnEnviar" type="submit" value="Actualizar contacto">
+                        <a id="Eliminar" href="eliminar.php?idContact=<?php echo $registro[0]; ?>">Eliminar contacto</a>
+                    </div>
                 </div>
             </form>
         <?php endforeach; ?>
