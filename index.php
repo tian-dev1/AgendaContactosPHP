@@ -46,7 +46,7 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
                     <img class="images" src="<?php echo $registro[5]; ?>" alt="">
                     <div class=row>
                         <label class="labelsContact" for="idContact">ID Imagen: </label>
-                        <input type="number" readonly="readonly" name="photo" id="idContact" value="<?php echo $registro[0]; ?>"/>
+                        <input type="number" readonly="readonly" name="idContact" id="idContact" value="<?php echo $registro[0]; ?>"/>
                     </div>
                     <div class="row">
                         <label class="labelsContact" for="names">Nombre: </label>
@@ -62,10 +62,11 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
                     </div>
                     <div class="row">
                         <label class="labelsContact" for="email">Correo: </label>
-                        <input type="email" name="nameImg" id="email" value="<?php echo $registro[4]; ?>" required/>
+                        <input type="email" name="email" id="email" value="<?php echo $registro[4]; ?>" required/>
                     </div>
-                    <input class="file" type="file" name="img" required/>    
+                    <input class="file" type="file" name="photo" required/>    
                     <input class="buttonUpdate" name="btnEnviar" type="submit" value="Actualizar contacto">
+                    
                 </div>
             </form>
         <?php endforeach; ?>
