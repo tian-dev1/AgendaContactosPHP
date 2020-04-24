@@ -24,13 +24,13 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
         <h2>Ingresar contacto</h2>
         <form  class="formAgregar" method="POST" action="agregar.php" enctype="multipart/form-data">
             
-            <input type="text" name="name" id="name" placeholder="Nombre:" required="required">
+            <input type="text" name="names" id="name" placeholder="Nombre:" required>
 
-            <input type="text" name="lastName" id="lastName" placeholder="Apellidos:" required="required">
+            <input type="text" name="lastName" id="lastName" placeholder="Apellidos:" required>
 
-            <input type="email" name="email" id="email" placeholder="Email:" required="required">
+            <input type="email" name="email" id="email" placeholder="Email:" required>
 
-            <input type="number" name="phone" id="phone" placeholder="Teléfono:" required="required">
+            <input type="number" name="phone" id="phone" placeholder="Teléfono:" required>
             <div class="divFile">
                 <input type="file" class="file" name="photo" required>
             </div>
@@ -44,25 +44,25 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
             <form method="POST" action="actualizar.php" enctype="multipart/form-data">
                 <div class="card">
                     <img class="images" src="<?php echo $registro[5]; ?>" alt="">
-                    <input type="hidden" readonly="readonly" name="idContact" id="idContact" value="<?php echo $registro[0]; ?>"/>
+                    <input type="hidden" readonly="readonly" name="idContactUpdate" id="idContactUpdate" value="<?php echo $registro[0]; ?>"/>
                     <div class="row">
-                        <label class="labelsContact" for="names">Nombre: </label>
-                        <input type="text" name="names" id="names" value="<?php echo $registro[1]; ?>" required/>
+                        <label class="labelsContact" for="namesUpdate">Nombre: </label>
+                        <input type="text" name="namesUpdate" id="namesUpdate" value="<?php echo $registro[1]; ?>" required/>
                     </div>
                     <div class=row>
-                        <label class="labelsContact" for="lastName">Apellidos: </label>
-                        <input type="text" name="lastName" id="lastName" value="<?php echo $registro[2]; ?>"/>
+                        <label class="labelsContact" for="lastNameUpdate">Apellidos: </label>
+                        <input type="text" name="lastNameUpdate" id="lastNameUpdate" value="<?php echo $registro[2]; ?>" required/>
                     </div>
                     <div class="row">
-                        <label class="labelsContact" for="">Teléfono: </label>
-                        <input type="number" name="phone" id="phone" value="<?php echo $registro[3]; ?>" required/>
+                        <label class="labelsContact" for="phoneUpdate">Teléfono: </label>
+                        <input type="number" name="phoneUpdate" id="phoneUpdate" value="<?php echo $registro[3]; ?>" required/>
                     </div>
                     <div class="row">
-                        <label class="labelsContact" for="email">Correo: </label>
-                        <input type="email" name="email" id="email" value="<?php echo $registro[4]; ?>" required/>
+                        <label class="labelsContact" for="emailUpdate">Correo: </label>
+                        <input type="email" name="emailUpdate" id="emailUpdate" value="<?php echo $registro[4]; ?>" required/>
                     </div>
                     <div class="divFile">
-                        <input class="file" type="file" name="photo" required/>    
+                        <input class="file" type="file" name="photoUpdate" required/>    
                     </div>
                     <div class="buttonsActions">
                         <input class="buttonUpdate" name="btnEnviar" type="submit" value="Actualizar contacto">
