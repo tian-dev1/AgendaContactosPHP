@@ -19,5 +19,5 @@ $sql = "INSERT INTO contacto (names, lastName, phone, email, photo) VALUES ('$na
 mysqli_query($conexion, $sql); #abrimos la conexión y ejecutamos la sentencia sql
 
 //Indicamos a qué archivo nos debe redirigir una vez hecho el registro
-//header('Location: index.php');
+header('Location: index.php');
 ?>
