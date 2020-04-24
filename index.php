@@ -66,7 +66,7 @@ $resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la
                     </div>
                     <input class="file" type="file" name="photo" required/>    
                     <input class="buttonUpdate" name="btnEnviar" type="submit" value="Actualizar contacto">
-                    
+                    <a href="eliminar.php?idContact=<?php echo $registro[0]; ?>">Eliminar</a>
                 </div>
             </form>
         <?php endforeach; ?>

@@ -1,10 +1,10 @@
-h2{
+h1, h2{
     text-align: center;
 }
 .container{
     background-color: red;
     padding: 20px 0;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 .formAgregar{
     background-color: rosybrown;
@@ -13,7 +13,7 @@ h2{
     flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 20px;
     
 }
 
@@ -52,21 +52,16 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus{
 }
 
 
-
-
-
-
-
-
-
 .containerTwo{
+    background-color: blue;
     display: flex;
     flex-wrap: wrap;
     width: 95%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 
 .card{
+    background-color: yellow;
     width: 430px; 
     min-height:  780px;
     margin: 20px;
