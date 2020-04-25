@@ -1,6 +1,7 @@
 <?php
 
 require('conexion.php'); #Solicitamos la conexion a la BD
+
 $sql = "SELECT * FROM contacto ORDER BY names ASC"; #guardamos en una variable la sentencia sql de la consulta
 
 $resultado = mysqli_query($conexion, $sql); #resultado = $conexion->query($sql);
@@ -43,10 +44,41 @@ if(mysqli_num_rows($resultado)==0){
     </div>
      
     <h2>Lista y actualización de contactos</h2>
+    <div class="container">
+        <form class="formQuery" method="GET" enctype="multipart/form-data">
+            <h3>Filtrar contactos</h3>
+            <label for="" style="color: gray;">Filtrar por:</label>
+            <select class="itemQuery" name="itemQuery">
+                <option value="names" selected>Nombre</option> 
+                <option value="lastName">Apellidos</option>
+                <option value="phone">Teléfono</option>
+            </select>
+            <input type="text" name="filter" id="filter" placeholder="Dato a consultar:" required>
+            <input type="submit" value="Buscar contacto"/>
+        </form>
+    </div>
+    
+
+    <div class="Query">
+        <?php 
+            if(!empty($_GET['filter'])){
+                include "filtrar.php"; 
+
+               
+                
+               
+            }
+        ?>   
+        
+        
+    </div>
+
+
+
     <?php echo $mensaje ?>
     <div class="containerTwo">
         
-        <?php foreach($resultado_contactos as $registro): ?>
+         <?php foreach($resultado_contactos as $registro): ?>
             <form method="POST" action="actualizar.php" enctype="multipart/form-data">
                 <div class="card">
                     <img class="images" src="<?php echo $registro[5]; ?>" alt="">
@@ -76,11 +108,8 @@ if(mysqli_num_rows($resultado)==0){
                     </div>
                 </div>
             </form>
-        <?php endforeach; ?>
+        <?php endforeach; ?> 
     </div>
-    <script>
-        
-    </script>
 </body>
 </html>
 <?php 

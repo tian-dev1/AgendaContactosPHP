@@ -1,6 +1,3 @@
-
-
-
 h1, h2, h3{
     text-align: center;
     
@@ -39,6 +36,7 @@ input[type="submit"]{ /*Botones de header y sobre mi*/
     background: #205454;
     width: 160px;
     margin: 0 auto;
+    padding: 20px;
 }
 
 .divFile{
@@ -146,4 +144,28 @@ input[type=number] {
     text-decoration: none; /* Quitamos subrayado*/
     text-align: center;
     margin: 10px auto;
+}
+.formQuery{
+    text-align: center;
+}
+.itemQuery{
+    width: 30%;
+    padding: 20px 0;
+    margin: 20px;
+    border: 0;
+    border-bottom: 1px solid #5cb8ff;
+    background-color: white;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    font-size: 15px;
+    color: grey;
+}
+
+.formQuery input[type="text"]{ /* Este estilo toma todos los input de tipo text y email*/
+    width: 30%;
+    padding: 20px 0;
+    margin: 20px;
+    border: 0;
+    border-bottom: 1px solid #5cb8ff;
+   
 }
