@@ -1,13 +1,11 @@
 <?php
 
-require('conexion.php'); #Solicitamos la conexion a la BD
-
+require('conexion.php'); #Solicitamos conexion a base de datos
 $sql = "SELECT * FROM contacto ORDER BY names ASC"; #guardamos en una variable la sentencia sql de la consulta
-
 $resultado = mysqli_query($conexion, $sql); #resultado = $conexion->query($sql);
+$resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la sentencia. Esto devuelve un array
 
-$resultado_contactos = mysqli_fetch_all($resultado); #Obtiene el resultado de la sentencia. ESto devuelve un array
-
+//Validamos que el resultado de la consulta traiga datos 
 if(mysqli_num_rows($resultado)==0){
     $mensaje = "<h3>No hay registros en la BD</h3>";
 }else{
@@ -25,6 +23,7 @@ if(mysqli_num_rows($resultado)==0){
 </head>
 <body> 
     <h1>Agenda de contactos</h1>
+    <!-- Section de agregar contacto -->
     <div class="container">
         <h2>Ingresar contacto</h2>
         <form  class="formAgregar" method="POST" action="agregar.php" enctype="multipart/form-data">
@@ -44,6 +43,7 @@ if(mysqli_num_rows($resultado)==0){
     </div>
      
     <h2>Lista y actualización de contactos</h2>
+    <!-- Section de filtrar contacto -->
     <div class="container">
         <form class="formQuery" method="GET" enctype="multipart/form-data">
             <h3>Filtrar contactos</h3>
@@ -57,27 +57,19 @@ if(mysqli_num_rows($resultado)==0){
             <input type="submit" value="Buscar contacto"/>
         </form>
     </div>
-    
-
     <div class="Query">
         <?php 
-            if(!empty($_GET['filter'])){
+        #Validar si los datos de filtrar sean diferente en a null  
+            if(!empty($_GET['filter']) && !empty($_GET['itemQuery'])){
+                //Incluimos el archivo de filtrar
                 include "filtrar.php"; 
-
-               
-                
-               
             }
-        ?>   
-        
-        
+        ?>    
     </div>
-
-
 
     <?php echo $mensaje ?>
     <div class="containerTwo">
-        
+        <!-- Realizamos el foreach para listar los contactos -->
          <?php foreach($resultado_contactos as $registro): ?>
             <form method="POST" action="actualizar.php" enctype="multipart/form-data">
                 <div class="card">

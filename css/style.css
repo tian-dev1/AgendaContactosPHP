@@ -2,6 +2,7 @@ h1, h2, h3{
     text-align: center;
     
 }
+/* SECTION  INGRESAR CONTACTO */
 .container{
     width: 90%;
     padding: 20px 0;
@@ -18,7 +19,6 @@ h1, h2, h3{
     padding: 20px;
     
 }
-
 .formAgregar  input[type="text"],
 .formAgregar  input[type="email"],
 .formAgregar  input[type="number"]{ /* Este estilo toma todos los input de tipo text y email*/
@@ -29,7 +29,6 @@ h1, h2, h3{
     border-bottom: 1px solid #5cb8ff;
     font-size: 17px;
 }
-
 input[type="submit"]{ /*Botones de header y sobre mi*/
     font-size: 14px;
     color: #fff;
@@ -38,7 +37,6 @@ input[type="submit"]{ /*Botones de header y sobre mi*/
     margin: 0 auto;
     padding: 20px;
 }
-
 .divFile{
     display: flex;
     border-bottom: 1px solid #5cb8ff;
@@ -54,14 +52,13 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus{
     border-bottom: 1px solid #1e7d7d;
 }
 
-
+/* SECTION LISTAR CONTACTO */
 .containerTwo{
     display: flex;
     flex-wrap: wrap;
     width: 95%;
     margin: 20px auto;
 }
-
 .card{
     width: 430px; 
     min-height:  750px;
